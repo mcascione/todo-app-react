@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useState } from "react";
+import TodoForm from "./TodoForm";
 
-function todolist() {
+function TodoList() {
+  const [todos, setTodos] = useState([]);
+
+  const addTodo = (todo) => {
+    if (!todo.text || /^\s*$/.test(todo.text)) {
+      return;
+    }
+    const newTodos = [todo, ...todos];
+
+    setTodos(newTodos);
+  };
+
   return (
-    <div>todolist</div>
-  )
+    <div>
+      <h1>What's on the agenda for today?</h1>
+      <TodoForm onSubmit={addTodo} />
+    </div>
+  );
 }
 
-export default todolist
+export default TodoList;
