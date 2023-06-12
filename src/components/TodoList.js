@@ -39,6 +39,11 @@ function TodoList() {
     setTodos(updatedTodos);
   };
 
+  const handleClear = () => {
+    const notComplete = [...todos].filter((todo) => !todo.isComplete);
+    setTodos(notComplete);
+  };
+
   return (
     <div>
       <h1>What's on the agenda for today?</h1>
@@ -49,6 +54,9 @@ function TodoList() {
         removeTodo={removeTodo}
         updateTodo={updateTodo}
       />
+      <button className="clear-completed-button" onClick={handleClear}>
+        Remove Completed Todos
+      </button>
     </div>
   );
 }
