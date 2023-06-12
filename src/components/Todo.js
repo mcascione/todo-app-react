@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TodoForm from "./TodoForm";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
   const [edit, setEdit] = useState({
@@ -26,6 +27,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
       key={index}
     >
       <div key={todo.id} onClick={() => completeTodo(todo.id)}>
+        <IoMdCheckmarkCircleOutline className="circle-mark-icon" />
         {todo.text}
       </div>
       <div className="icons">

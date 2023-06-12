@@ -28,7 +28,7 @@
   
   h1 {
     margin: 32px 0;
-    color: #fff;
+    color: blanchedalmond;
     font-size: 24px;
   }
   
@@ -48,7 +48,7 @@
     outline: none;
     width: 320px;
     background: transparent;
-    color: #fff;
+    color: blanchedalmond;
   }
   
   .todo-input::placeholder {
@@ -66,7 +66,7 @@
       rgba(93, 12, 255, 1) 0%,
       rgba(155, 0, 250, 1) 100%
     );
-    color: #fff;
+    color: blanchedalmond;
     text-transform: capitalize;
   }
   
@@ -94,7 +94,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 4px auto;
-    color: #fff;
+    color: blanchedalmond;
     background: linear-gradient(
       90deg,
       rgba(255, 118, 20, 1) 0%,
@@ -136,12 +136,17 @@
     font-size: 24px;
     cursor: pointer;
   }
+
+  .circle-mark-icon {
+    margin-right: 8px; 
+    color: blanchedalmond
+  }
   
   .delete-icon {
     margin-right: 5px;
-    color: #fff;
+    color: black;
   }
   
   .edit-icon {
-    color: #fff;
+    color: black;
   }
